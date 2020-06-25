@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/favicon.png">
+    <!-- Estilo -->
+    <link rel="stylesheet" type="text/css" href="./css/estilo.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap" rel="stylesheet"> 
+    <title>Lofi Player</title>
+</head>
+<body>
+    <img src="#" id="img1" class="img visivel" data-gif="0">
+    <img src="#" id="img2" class="img oculto" data-gif="1">
+
+    <div id="load"></div>
+
+    <div class="container"><!-- Container -->
+        <h2 id="relogio"></h2>
+        <script>
+            setInterval(function() {
+                var d= new Date()
+                var h= d.getHours()
+                var m= d.getMinutes()
+                var s= d.getSeconds()
+                var relogio = (h < 10? '0'+h:h)+':'+(m < 10? '0'+m:m)+':'+(s < 10? '0'+s:s)
+                document.getElementById('relogio').innerHTML=relogio
+            }, 1000)
+        </script>
+        <div>
+
+            <!-- icon prev -->
+            <svg id="prev" class="img-icons" onclick="clique(this);player.previousVideo()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-skip-back"><polygon points="19 20 9 12 19 4 19 20"></polygon><line x1="5" y1="19" x2="5" y2="5"></line></svg>
+            
+            <!-- icon prev -->
+            <svg id="play" onclick="clique(this);listaAleatoria(this);player.playVideo()" data-aleatoria="true" class="img-icons icon-center" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play-circle"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+            
+            <!-- icon pause -->
+            <svg id="pause" style="display: none;" onclick="clique(this);player.pauseVideo()" class="img-icons icon-center" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play-circle"><circle cx="12" cy="12" r="10"></circle><line x1="10" y1="15" x2="10" y2="9"></line><line x1="14" y1="15" x2="14" y2="9"></line></svg>
+
+            <!-- icon next -->
+            <svg id="next" onclick="clique(this);player.nextVideo()" class="img-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-skip-forward"><polygon points="5 4 15 12 5 20 5 4"></polygon><line x1="19" y1="5" x2="19" y2="19"></line></svg>
+
+        </div>
+        
+    </div><!--/ Container -->
+    <div id="player"></div>
+
+    <script src="./js/youtube-api.js"></script>
+    <script src="./js/gifs.js"></script>
+</body>
+</html>
