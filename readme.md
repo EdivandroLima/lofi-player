@@ -5,6 +5,8 @@ Projeto feito para estudo e prática de JavaScript.
 
 Todas as imagens pertencem a [este repositório](https://github.com/andumorie/8bitdash.github.io/)
 
+Clique [aqui](https://lofi-player.edivandrolima.vercel.app/) para ver como ficou.
+
 ## Ferramentas utilizadas
 
 - HTML
@@ -12,4 +14,6 @@ Todas as imagens pertencem a [este repositório](https://github.com/andumorie/8b
 - Google Fonts
 - JavaScript
 - YouTube API IFrame
+
+![Preview](./preview.png)
 
