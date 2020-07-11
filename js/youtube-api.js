@@ -69,7 +69,7 @@ function listaAleatoria(valor) {
         load.style.display = 'none'
 }
 
-// Erro
+// Se ouver erro
 function onError(event) {
     player.nextVideo()
 }
