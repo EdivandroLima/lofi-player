@@ -19,20 +19,16 @@ function img() {
     var ale= Math.floor(Math.random()*89+0)
 
     if (img1.className.indexOf('visivel') != -1) {
-        img1.classList.add('oculto')
-        img1.classList.remove('visivel')
-        img2.classList.add('visivel')
-        img2.classList.remove('oculto')
+        img1.className="oculto img"
+        img2.className="visivel img"
 
         // img1.dataset.gif= parseInt(img1.dataset.gif) + 2
 
         setTimeout("img1.src= './img-gifs/"+gifs[ale]+".gif'", 1000)
     }
     else {
-        img1.classList.add('visivel')
-        img1.classList.remove('oculto')
-        img2.classList.add('oculto')
-        img2.classList.remove('visivel')
+        img2.className="oculto img"
+        img1.className="visivel img"
 
         // img2.dataset.gif= parseInt(img2.dataset.gif) + 2
 
