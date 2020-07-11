@@ -9,11 +9,11 @@ Clique [aqui](https://lofi-player.edivandrolima.vercel.app/) para ver como ficou
 
 ## Ferramentas utilizadas
 
-- HTML
-- CSS
-- Google Fonts
-- JavaScript
-- YouTube API IFrame
+[x] HTML
+[x] CSS
+[x] Google Fonts
+[x] JavaScript
+[x] YouTube API IFrame
 
-![Preview](./preview.png)
+![Preview](./preview2.png)
 
